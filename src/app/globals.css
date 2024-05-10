@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -29,5 +29,324 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+} */
+@font-face {
+  font-family: "Rubik";
+  src: url("/font/static/Rubik-ExtraBold.ttf") format("truetype");
+}
+
+.svg {
+  position: absolute;
+  /* background-color: black; */
+  width: 95%;
+  height: 90%;
+  z-index: 0;
+  top: "50px";
+}
+
+.svg text {
+  font-family: "Rubik", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif, sans-serif;
+  text-transform: uppercase;
+  animation: stroke 5s alternate;
+  stroke-width: 1;
+  stroke: #4d4d4d;
+  font-weight: bold;
+  fill: #4d4d4d;
+  font-size: 390px;
+  animation-iteration-count: 1;
+
+  /* top: 0; */
+
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+.rubik-asd {
+  font-weight: 900;
+  font-style: normal;
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(128, 128, 128, 0);
+    stroke: #4d4d4d;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 1;
+  }
+  70% {
+    fill: rgba(128, 128, 128, 0);
+    stroke: #4d4d4d;
+  }
+  80% {
+    fill: rgba(128, 128, 128, 0);
+    stroke: #4d4d4d;
+    stroke-width: 1;
+  }
+  100% {
+    fill: #4d4d4d;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 1;
+  }
+}
+.car {
+  background-image: url("/car.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 57rem;
+  height: 25.699rem;
+  position: absolute;
+  bottom: 3px;
+  left: 90px;
+  animation: moveAndAppear 6s ease-in-out;
+}
+
+.wheel1,
+.wheel2 {
+  position: absolute;
+  z-index: 1;
+}
+
+.wheel1 {
+  background-image: url("/wheel-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  background-color: black;
+  width: 140px;
+  height: 140px;
+  bottom: -1px;
+  left: 44.5%;
+  animation: wheelAndMove 6s ease-in-out;
+}
+
+.wheel2 {
+  background-image: url("/wheel-removebg-preview.png");
+  border-radius: 100%;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 140px;
+  height: 140px;
+  bottom: -1px;
+  left: 175px;
+  animation: wheel1AndMove 6s ease-in-out;
+}
+
+@keyframes moveAndAppear {
+  0% {
+    left: 90px;
+    opacity: 1;
+  }
+  10% {
+    /* left: calc(90px + 40px); */
+  }
+  20% {
+    left: calc(90px + 50px);
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+
+  55% {
+    left: calc(100vw + 23rem);
+    opacity: 0;
+  }
+
+  60% {
+    left: calc(-100vw - 23rem);
+    opacity: 0;
+  }
+
+  65% {
+    left: calc(-100vw - 23rem);
+    opacity: 0;
+  }
+
+  85% {
+    /* left: 88px; */
+    opacity: 1;
+  }
+
+  90% {
+    left: 90px;
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+  /* 96% {
+    left: 86px;
+    opacity: 1;
+  }
+  97% {
+    left: 87px;
+    opacity: 1;
+  }
+
+  98% {
+    left: 88px;
+    opacity: 1;
+  }
+  99% {
+    left: 89px;
+    opacity: 1;
+  } */
+
+  100% {
+    left: 90px;
+    opacity: 1;
+  }
+}
+
+@keyframes wheelAndMove {
+  0% {
+    left: 44.5%;
+    opacity: 1;
+    transform: rotate(10deg);
+  }
+
+  20% {
+    left: calc(44.5% + 46px);
+    opacity: 1;
+    transform: rotate(100deg);
+  }
+
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+
+  /* 50% {
+    left: calc(100vw + 50px);
+    opacity: 1;
+    transform: rotate(720deg);
+  } */
+  55% {
+    left: calc(100vw + 62rem);
+    opacity: 0;
+    transform: rotate(720deg);
+  }
+
+  60% {
+    left: calc(-90vw - 0rem);
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  65% {
+    left: calc(-80vw);
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+    /* transform: rotate(100deg); */
+  }
+
+  85% {
+    /* left: 88px; */
+    opacity: 1;
+    /* transform: rotate(630deg); */
+  }
+
+  90% {
+    left: 44.5%;
+    opacity: 1;
+    transform: rotate(720deg);
+  }
+
+  95% {
+    opacity: 1;
+    transform: rotate(720deg);
+  }
+
+  100% {
+    left: 44.5%;
+    opacity: 1;
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes wheel1AndMove {
+  0% {
+    left: 175px;
+    opacity: 1;
+    transform: rotate(10deg);
+  }
+
+  20% {
+    left: calc(175px + 46px);
+    opacity: 1;
+    transform: rotate(100deg);
+  }
+
+  30% {
+    opacity: 1;
+    /* transform: rotate(300deg); */
+  }
+  40% {
+    opacity: 1;
+  }
+
+  /* 50% {
+    left: calc(100vw + 50px);
+    opacity: 1;
+    transform: rotate(720deg);
+  } */
+  55% {
+    left: calc(100vw + 29rem);
+    opacity: 0;
+    transform: rotate(720deg);
+  }
+
+  60% {
+    left: calc(-70vw - 0rem);
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  65% {
+    left: calc(-120vw);
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+    /* transform: rotate(100deg); */
+  }
+
+  85% {
+    /* left: 88px; */
+    opacity: 1;
+    /* transform: rotate(630deg); */
+  }
+
+  90% {
+    left: 175px;
+    opacity: 1;
+    transform: rotate(720deg);
+  }
+
+  95% {
+    opacity: 1;
+    transform: rotate(720deg);
+  }
+
+  100% {
+    left: 175px;
+    opacity: 1;
+    transform: rotate(720deg);
   }
 }
