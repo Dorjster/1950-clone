@@ -31,10 +31,10 @@ body {
     text-wrap: balance;
   }
 } */
-@font-face {
+/* @font-face {
   font-family: "Rubik";
   src: url("/font/static/Rubik-ExtraBold.ttf") format("truetype");
-}
+} */
 
 .svg {
   position: absolute;
@@ -49,7 +49,7 @@ body {
   font-family: "Rubik", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif, sans-serif;
   text-transform: uppercase;
-  animation: stroke 5s alternate;
+  animation: stroke 6s alternate;
   stroke-width: 1;
   stroke: #4d4d4d;
   font-weight: bold;
@@ -218,7 +218,7 @@ body {
   20% {
     left: calc(49.5% + 46px);
     opacity: 1;
-    transform: rotate(100deg);
+    transform: rotate(120deg);
   }
 
   30% {
@@ -236,7 +236,7 @@ body {
   55% {
     left: calc(100vw + 62rem);
     opacity: 0;
-    transform: rotate(720deg);
+    transform: rotate(1180deg);
   }
 
   60% {
@@ -289,7 +289,7 @@ body {
   20% {
     left: calc(175px + 46px);
     opacity: 1;
-    transform: rotate(100deg);
+    transform: rotate(120deg);
   }
 
   30% {
@@ -308,7 +308,7 @@ body {
   55% {
     left: calc(100vw + 29rem);
     opacity: 0;
-    transform: rotate(720deg);
+    transform: rotate(1080deg);
   }
 
   60% {
