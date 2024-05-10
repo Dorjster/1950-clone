@@ -45,13 +45,13 @@ const page = () => {
         </div>
       </div>
       <div className="w-full h-screen bg-black relative top-0 z-0">
-        {/* <Image
+        <Image
           src="/back.svg"
           alt=""
           className="w-full h-full object-cover absolute top-0 "
           layout="fill"
-        /> */}
-        <div className="w-fit h-fit ">
+        />
+        <div className="w-fit h-fit absolute">
           <Tilter />
         </div>
       </div>

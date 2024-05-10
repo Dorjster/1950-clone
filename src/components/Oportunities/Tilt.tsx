@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
+import Image from "next/image";
+import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
+import Button from "./Button";
 
-const Oportunities = [
+const Opportunities = [
   {
     title: "Такси",
     image: "/taxi.webp",
@@ -29,11 +31,11 @@ const Oportunities = [
   },
   {
     title: "Урамшуулал , бонусын систем",
-    image: "/.webp",
+    image: "/wallet.webp",
   },
   {
     title: "Аялалын үеийн хамгаалалт",
-    image: "/taxi.webp",
+    image: "/secure.webp",
   },
   {
     title: "Жолоочтой бичгээр харилцах",
@@ -41,14 +43,58 @@ const Oportunities = [
   },
   {
     title: "Аялалаа хуваалцах",
-    image: "/taxi.webp",
+    image: "/share.webp",
   },
 ];
 
 const Tilter = () => {
+  const [hoveredImage, setHoveredImage] = useState<string>(
+    Opportunities[0].image // Set default to first image
+  );
+
+  const handleTitleHover = (image: string) => {
+    setHoveredImage(image);
+  };
+
+  // Split Opportunities array into two sections
+  const firstSection = Opportunities.slice(0, 5);
+  const secondSection = Opportunities.slice(5);
+
   return (
-    <div>
-      <Tilt></Tilt>
+    <div className="flex justify-between w-full">
+      <div className="opportunities">
+        {firstSection.map((opportunity, index) => (
+          <Button
+            key={index}
+            // className="opportunity-title text-white"
+            onMouseEnter={() => handleTitleHover(opportunity.image)}
+            onMouseLeave={() => {}}
+            title={opportunity.title}
+          />
+        ))}
+      </div>
+
+      <Tilt tiltEnable={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+        <div className="opportunity-image">
+          <Image
+            src={hoveredImage}
+            alt="Hovered Image"
+            width={300}
+            height={500}
+          />
+        </div>
+      </Tilt>
+      <div className="opportunities">
+        {secondSection.map((opportunity, index) => (
+          <Button
+            key={index}
+            // className="opportunity-title text-white"
+            onMouseEnter={() => handleTitleHover(opportunity.image)}
+            onMouseLeave={() => {}}
+            title={opportunity.title}
+          />
+        ))}
+      </div>
     </div>
   );
 };
