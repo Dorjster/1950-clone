@@ -14,15 +14,16 @@ const Download = () => {
 
       <div className="flex gap-4 mt-4">
         {" "}
-        <button className=" bg-white flex w-[16%] rounded-full py-[20px] items-center justify-between px-[20px] ">
+        <button className=" bg-white flex w-[18%] rounded-full py-[15px] items-center justify-between px-[20px] cursor-pointer ">
           <Image src="/apple.svg" alt="apple store" width={40} height={50} />
-          <div>
+          <div className="cursor-pointer">
             {" "}
             Available on the
-            <br /> <span className="text-slate-500">App Store</span>
+            <br />{" "}
+            <span className="text-slate-500 cursor-pointer">App Store</span>
           </div>
         </button>
-        <button className="bg-white flex w-[16%] rounded-full py-[20px] items-center gap-[30px] px-[20px] ">
+        <button className="bg-white flex w-[18%] rounded-full py-[15px] items-center gap-[30px] px-[20px] ">
           <Image src="/playstore.svg" alt="playstore" width={40} height={50} />
           <div>
             {" "}
