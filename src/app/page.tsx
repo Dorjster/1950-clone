@@ -60,7 +60,10 @@ const Page: React.FC = () => {
         </button>
       </header>
       <main>
-        <div className="bg-black w-screen h-screen" ref={introductionRef}>
+        <div
+          className="bg-black w-screen h-screen pt-[20px]"
+          ref={introductionRef}
+        >
           <Svg />
           <div className="w-[90%] h-[40%] ml-[8%] mt-[2%] absolute py-[20px]">
             <Download />
