@@ -2,43 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
-/* @font-face {
-  font-family: "Rubik";
-  src: url("/font/static/Rubik-ExtraBold.ttf") format("truetype");
-} */
-
 .svg {
   position: absolute;
-  /* background-color: black; */
+
   width: 95%;
   height: 90%;
   z-index: 0;
@@ -56,11 +22,6 @@ body {
   fill: #4d4d4d;
   font-size: 390px;
   animation-iteration-count: 1;
-
-  /* top: 0; */
-
-  /* width: 100%; */
-  /* height: 100%; */
 }
 
 .rubik-asd {
@@ -142,7 +103,6 @@ body {
     opacity: 1;
   }
   10% {
-    /* left: calc(90px + 40px); */
   }
   20% {
     left: calc(90px + 50px);
@@ -172,7 +132,6 @@ body {
   }
 
   85% {
-    /* left: 88px; */
     opacity: 1;
   }
 
@@ -184,23 +143,6 @@ body {
   95% {
     opacity: 1;
   }
-  /* 96% {
-    left: 86px;
-    opacity: 1;
-  }
-  97% {
-    left: 87px;
-    opacity: 1;
-  }
-
-  98% {
-    left: 88px;
-    opacity: 1;
-  }
-  99% {
-    left: 89px;
-    opacity: 1;
-  } */
 
   100% {
     left: 90px;
@@ -228,11 +170,6 @@ body {
     opacity: 1;
   }
 
-  /* 50% {
-    left: calc(100vw + 50px);
-    opacity: 1;
-    transform: rotate(720deg);
-  } */
   55% {
     left: calc(100vw + 62rem);
     opacity: 0;
@@ -252,13 +189,10 @@ body {
 
   80% {
     opacity: 1;
-    /* transform: rotate(100deg); */
   }
 
   85% {
-    /* left: 88px; */
     opacity: 1;
-    /* transform: rotate(630deg); */
   }
 
   90% {
@@ -294,17 +228,10 @@ body {
 
   30% {
     opacity: 1;
-    /* transform: rotate(300deg); */
   }
   40% {
     opacity: 1;
   }
-
-  /* 50% {
-    left: calc(100vw + 50px);
-    opacity: 1;
-    transform: rotate(720deg);
-  } */
   55% {
     left: calc(100vw + 29rem);
     opacity: 0;
@@ -324,13 +251,10 @@ body {
 
   80% {
     opacity: 1;
-    /* transform: rotate(100deg); */
   }
 
   85% {
-    /* left: 88px; */
     opacity: 1;
-    /* transform: rotate(630deg); */
   }
 
   90% {

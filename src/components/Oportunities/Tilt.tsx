@@ -55,32 +55,37 @@ const Tilter = () => {
   const handleTitleHover = (image: string) => {
     setHoveredImage(image);
   };
+  const buttonStyle = {
+    marginLeft: "40px",
+  };
+  const buttonStyle1 = {
+    marginLeft: "40px",
+  };
 
-  // Split Opportunities array into two sections
   const firstSection = Opportunities.slice(0, 5);
   const secondSection = Opportunities.slice(5);
 
   return (
     <div className="flex justify-between w-full">
-      <div className="opportunities">
+      <div className="opportunities w-fit ">
         {firstSection.map((opportunity, index) => (
           <Button
             key={index}
-            // className="opportunity-title text-white"
             onMouseEnter={() => handleTitleHover(opportunity.image)}
             onMouseLeave={() => {}}
             title={opportunity.title}
+            style={index % 2 === 0 ? buttonStyle : undefined}
           />
         ))}
       </div>
 
-      <Tilt tiltEnable={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+      <Tilt tiltEnable={true} tiltMaxAngleX={25} tiltMaxAngleY={25}>
         <div className="opportunity-image">
           <Image
             src={hoveredImage}
             alt="Hovered Image"
-            width={300}
-            height={500}
+            width={250}
+            height={400}
           />
         </div>
       </Tilt>
@@ -88,10 +93,10 @@ const Tilter = () => {
         {secondSection.map((opportunity, index) => (
           <Button
             key={index}
-            // className="opportunity-title text-white"
             onMouseEnter={() => handleTitleHover(opportunity.image)}
             onMouseLeave={() => {}}
             title={opportunity.title}
+            style={index % 2 === 1 ? buttonStyle1 : undefined}
           />
         ))}
       </div>

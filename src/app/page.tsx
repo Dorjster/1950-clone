@@ -2,6 +2,7 @@ import Car from "@/components/Introduction/Car";
 import Download from "@/components/Introduction/Download";
 import Status from "@/components/Introduction/Status";
 import Svg from "@/components/Introduction/Svg";
+import Intro from "@/components/Oportunities/Intro";
 import Tilter from "@/components/Oportunities/Tilt";
 import Image from "next/image";
 import React from "react";
@@ -51,7 +52,8 @@ const page = () => {
           className="w-full h-full object-cover absolute top-0 "
           layout="fill"
         />
-        <div className="w-fit h-fit absolute">
+        <div className="w-full h-full absolute px-[100px] flex flex-col gap-[80px] py-[50px]">
+          <Intro />
           <Tilter />
         </div>
       </div>
