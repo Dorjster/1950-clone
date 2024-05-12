@@ -14,7 +14,7 @@ const Download = () => {
 
       <div className="flex gap-4 mt-4">
         {" "}
-        <button className=" bg-white flex w-[18%] rounded-full py-[15px] items-center justify-between px-[20px] cursor-pointer ">
+        <button className=" bg-white flex w-[18%] rounded-full py-[15px] items-center gap-[30px] px-[20px] cursor-pointer ">
           <Image src="/apple.svg" alt="apple store" width={40} height={50} />
           <div className="cursor-pointer">
             {" "}

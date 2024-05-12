@@ -80,7 +80,7 @@ const Tilter = () => {
       </div>
 
       <Tilt tiltEnable={true} tiltMaxAngleX={25} tiltMaxAngleY={25}>
-        <div className="opportunity-image">
+        <div className="opportunity-image cursor-all-scroll">
           <Image
             src={hoveredImage}
             alt="Hovered Image"
