@@ -67,6 +67,7 @@ const Page: React.FC = () => {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  console.log(activeSection);
 
   return (
     <div>
@@ -142,7 +143,7 @@ const Page: React.FC = () => {
             <Tilter />
           </div>
         </div>
-        <div className="w-full bg-black h-[350px] pt-[10px]" ref={contactRef}>
+        <div className="w-full bg-black h-fit pt-[10px]" ref={contactRef}>
           <Footer />
         </div>
       </main>
