@@ -73,9 +73,9 @@ const Page: React.FC = () => {
     <div>
       <header className="sticky top-0 z-10 bg-[#0b0909] max-w-screen flex flex-wrap items-center justify-between mx-auto px-[100px] border-b-[1px] border-gray-600">
         <Image src="/1950.svg" alt="" width={80} height={36} />
-        <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-stone-950 dark:border-gray-700">
+        <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-stone-950 dark:border-gray-700 text-white">
           <li
-            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer hover:text-blue-600 ${
+            className={` text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer hover:text-blue-600 ${
               activeSection === "introduction" ? "text-blue-600" : ""
             }`}
             onClick={scrollToIntroduction}
@@ -83,7 +83,7 @@ const Page: React.FC = () => {
             Танилцуулга
           </li>
           <li
-            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer  hover:text-blue-600 ${
+            className={` text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer  hover:text-blue-600 ${
               activeSection === "opportunities" ? "text-blue-600" : ""
             }`}
             onClick={scrollToOpportunities}
@@ -91,7 +91,7 @@ const Page: React.FC = () => {
             Боломжууд
           </li>
           <li
-            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer hover:text-blue-600 ${
+            className={` text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer hover:text-blue-600 ${
               activeSection === "contact" ? "text-blue-600" : ""
             }`}
             onClick={scrollToContact}
