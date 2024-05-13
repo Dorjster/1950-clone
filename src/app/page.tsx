@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Car from "@/components/Introduction/Car";
@@ -12,6 +12,43 @@ const Page: React.FC = () => {
   const introductionRef = useRef<HTMLDivElement>(null);
   const opportunitiesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      const introRect = introductionRef.current?.getBoundingClientRect();
+      const opportunitiesRect =
+        opportunitiesRef.current?.getBoundingClientRect();
+      const contactRect = contactRef.current?.getBoundingClientRect();
+
+      if (
+        introRect &&
+        introRect.top >= 0 &&
+        introRect.bottom <= window.outerHeight
+      ) {
+        setActiveSection("introduction");
+      } else if (
+        opportunitiesRect &&
+        opportunitiesRect.top >= 0 &&
+        opportunitiesRect.bottom <= window.outerHeight
+      ) {
+        setActiveSection("opportunities");
+      } else if (
+        contactRect &&
+        contactRect.top >= 0 &&
+        contactRect.bottom <= window.outerHeight
+      ) {
+        setActiveSection("contact");
+      }
+    };
+
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
 
   const scrollToIntroduction = () => {
     if (introductionRef.current) {
@@ -37,19 +74,25 @@ const Page: React.FC = () => {
         <Image src="/1950.svg" alt="" width={80} height={36} />
         <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-stone-950 dark:border-gray-700">
           <li
-            className="text-white text-[16px] font-[400] block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0 cursor-pointer"
+            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer ${
+              activeSection === "introduction" ? "text-blue-500" : ""
+            }`}
             onClick={scrollToIntroduction}
           >
             Танилцуулга
           </li>
           <li
-            className="text-white text-[16px] font-[400] block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0 cursor-pointer"
+            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer ${
+              activeSection === "opportunities" ? "text-blue-500" : ""
+            }`}
             onClick={scrollToOpportunities}
           >
             Боломжууд
           </li>
           <li
-            className="text-white text-[16px] font-[400] block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0 cursor-pointer"
+            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer ${
+              activeSection === "contact" ? "text-blue-500" : ""
+            }`}
             onClick={scrollToContact}
           >
             Холбоо барих
@@ -61,8 +104,8 @@ const Page: React.FC = () => {
       </header>
       <main>
         <div
-          className="bg-black w-screen h-screen pt-[20px]"
           ref={introductionRef}
+          className="bg-black w-screen h-screen pt-[20px]"
         >
           <Svg />
           <div className="w-[90%] h-[40%] ml-[8%] mt-[2%] absolute py-[20px]">
@@ -99,7 +142,7 @@ const Page: React.FC = () => {
             <Tilter />
           </div>
         </div>
-        <div className="w-full bg-black h-[450px] pt-[10px]" ref={contactRef}>
+        <div className="w-full bg-black h-[350px] pt-[10px]" ref={contactRef}>
           <Footer />
         </div>
       </main>

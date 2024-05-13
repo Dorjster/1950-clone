@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </button>
       </div>
-      <ul className="flex  flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-stone-950 dark:border-gray-700">
+      {/* <ul className="flex  flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-stone-950 dark:border-gray-700">
         <li className="text-[#6B7381] text-[16px] font-[400] block py-2 pl-3 pr-4  bg-blue-700 rounded md:bg-transparent  md:p-0 cursor-pointer ">
           Танилцуулга
         </li>
@@ -36,7 +36,7 @@ const Footer = () => {
         <li className="text-[#6B7381] text-[16px] font-[400] block py-2 pl-3 pr-4  bg-blue-700 rounded md:bg-transparent  md:p-0 cursor-pointer">
           Холбоо барих
         </li>
-      </ul>
+      </ul> */}
       <div className="text-white">Бүх эрх хуулиар хамгаалагдсан ©2023</div>
     </div>
   );
