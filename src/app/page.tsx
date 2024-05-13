@@ -24,19 +24,19 @@ const Page: React.FC = () => {
 
       if (
         introRect &&
-        introRect.top >= 0 &&
+        introRect.top >= 30 &&
         introRect.bottom <= window.outerHeight
       ) {
         setActiveSection("introduction");
       } else if (
         opportunitiesRect &&
-        opportunitiesRect.top >= 0 &&
+        opportunitiesRect.top >= 30 &&
         opportunitiesRect.bottom <= window.outerHeight
       ) {
         setActiveSection("opportunities");
       } else if (
         contactRect &&
-        contactRect.top >= 0 &&
+        contactRect.top >= 30 &&
         contactRect.bottom <= window.outerHeight
       ) {
         setActiveSection("contact");
