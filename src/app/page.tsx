@@ -75,24 +75,24 @@ const Page: React.FC = () => {
         <Image src="/1950.svg" alt="" width={80} height={36} />
         <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-stone-950 dark:border-gray-700">
           <li
-            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer ${
-              activeSection === "introduction" ? "text-blue-500" : ""
+            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer hover:text-blue-600 ${
+              activeSection === "introduction" ? "text-blue-600" : ""
             }`}
             onClick={scrollToIntroduction}
           >
             Танилцуулга
           </li>
           <li
-            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer ${
-              activeSection === "opportunities" ? "text-blue-500" : ""
+            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer  hover:text-blue-600 ${
+              activeSection === "opportunities" ? "text-blue-600" : ""
             }`}
             onClick={scrollToOpportunities}
           >
             Боломжууд
           </li>
           <li
-            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer ${
-              activeSection === "contact" ? "text-blue-500" : ""
+            className={`text-white text-[16px] font-[400] block py-2 pl-3 pr-4 rounded md:p-0 cursor-pointer hover:text-blue-600 ${
+              activeSection === "contact" ? "text-blue-600" : ""
             }`}
             onClick={scrollToContact}
           >
